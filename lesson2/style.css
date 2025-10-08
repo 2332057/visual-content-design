@@ -1,0 +1,11 @@
+@charset "UTF-8";
+h1 {
+  text-align: center;
+}
+img {
+  border: 2px solid #f8b2b2;
+}
+p span {
+  color: #f08080;
+  text-decoration: underline;
+}
