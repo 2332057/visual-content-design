@@ -5,6 +5,33 @@ html {
 body {
   margin: 0;
 }
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header img {
+  height: 50px;
+  width: 50px;
+  padding: 4px;
+}
+header summary {
+  padding: 10px;
+  display: inline-block;
+}
+header ul {
+  width: 150px;
+  right: 0;
+  top: 58px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  background: white;
+  list-style: none;
+}
+header > * {
+  align-content: center;
+}
 h1 {
   text-align: center;
   color: #800000;
