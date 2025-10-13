@@ -1,0 +1,32 @@
+@charset "UTF-8";
+html {
+  background: #ffc0cb;
+}
+body {
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  color: #800000;
+}
+img {
+  width: 100%;
+}
+.img-shop {
+  max-height: 200px;
+  object-fit: cover;
+}
+section {
+  margin: 0 10px;
+}
+.cakes {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cake {
+  width: calc(50% - 5px);
+  box-sizing: border-box;
+  
+}
