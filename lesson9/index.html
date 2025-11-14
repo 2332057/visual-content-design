@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レスポンシブデザイン</title>
+  <style>
+    body {
+      margin: 8px;
+    }
+    .card {
+      padding: 14px;
+      border: 1px solid #393939;
+      border-radius: 7px;
+      box-sizing: border-box;
+    }
+    .large-card {
+      margin: 10px 0;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .small-card {
+      flex: 1 1 calc(100% - 8px);
+      height: 240px;
+    }
+    @media (min-width: 600px) {
+      .small-card {
+        flex: 1 1 calc((100% - 8px) / 2);
+        height: 120px;
+      }
+    }
+    @media (min-width: 900px) {
+      .small-card {
+        flex: 1 1 calc((100% - 16px) / 3);
+        height: 120px;
+        max-width: calc((100% - 16px) / 3);
+      }
+    }
+
+    /* 画面幅の表示 */
+
+    .width1, .width2, .width3 {
+      display: none;
+    }
+    @media (max-width: 599px) {
+      .large-card {
+        background-color: rgb(179, 220, 255);
+      }
+      .width1 {
+        display: block;
+      }
+    }
+    @media (min-width: 600px) and (max-width: 899px) {
+      .large-card {
+        background-color: rgb(255, 234, 128);
+      }
+      .width2 {
+        display: block;
+      }
+    }
+    @media (min-width: 900px) {
+      .large-card {
+        background-color: rgb(203, 158, 255);
+      }
+      .width3 {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>レスポンシブデザイン</h1>
+  <p>レスポンシブデザインを実装しました。画面幅を変えて確認してください。</p>
+
+  <div class="card large-card">
+    大きなカードコンテンツ
+    <br />
+    常に画面幅いっぱいに表示
+    <br />
+    600px未満、600px~899px、900px以上で表示内容が変わる
+    <br />
+    <div class="width1">現在の画面幅は600px未満</div>
+    <div class="width2">現在の画面幅は600px~899px</div>
+    <div class="width3">現在の画面幅は900px以上</div>
+  </div>
+
+  <div class="cards">
+    <div class="card small-card">カード1</div>
+    <div class="card small-card">カード2</div>
+    <div class="card small-card">カード3</div>
+    <div class="card small-card">カード4</div>
+    <div class="card small-card">カード5</div>
+    <div class="card small-card">カード6</div>
+    <div class="card small-card">カード7</div>
+    <div class="card small-card">カード8</div>
+  </div>
+</body>
+</html>
