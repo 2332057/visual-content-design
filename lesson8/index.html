@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScriptを使う</title>
+  <style>
+    #red-radio, #green-radio, #blue-radio {
+      margin-right: 8px;
+    }
+    #box {
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScriptを使う</h1>
+  <p>ラジオボタンを選択すると、ボックスの色を変更します。</p>
+
+  <label>
+    赤 <input type="radio" name="box-color-radio" id="red-radio">
+  </label>
+  <label>
+    緑 <input type="radio" name="box-color-radio" id="green-radio">
+  </label>
+  <label>
+    青 <input type="radio" name="box-color-radio" id="blue-radio">
+  </label>
+
+  <div id="box">
+    対象のボックス
+  </div>
+
+  <script>
+    const box = document.getElementById('box')
+    const redRadio = document.getElementById('red-radio')
+    const greenRadio = document.getElementById('green-radio')
+    const blueRadio = document.getElementById('blue-radio')
+
+    redRadio.addEventListener('change', () => {
+      box.style.backgroundColor = 'red'
+      box.style.color = 'black'
+    })
+    greenRadio.addEventListener('change', () => {
+      box.style.backgroundColor = 'green'
+      box.style.color = 'white'
+    })
+    blueRadio.addEventListener('change', () => {
+      box.style.backgroundColor = 'blue'
+      box.style.color = 'white'
+    })
+  </script>
+</body>
+</html>
