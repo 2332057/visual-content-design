@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+body, h1, h2, h3, ul, p {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+
+/* header */
+
+header {
+  height: 80px;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header img {
+  width: 80px;
+  height: 80px;
+  vertical-align: middle;
+}
+header small {
+  font-size: 24px;
+  line-height: 32px;
+  display: block;
+}
+header h1 {
+  font-size: 24px;
+  line-height: 48px;
+}
+
+/* nav */
+
+nav {
+  background-color: white;
+}
+nav a {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+nav > ul > li {
+  text-align: center;
+  position: relative;
+  flex-grow: 1;
+}
+nav > ul > li:nth-child(1) {
+  background-color: #538f31;
+}
+nav > ul > li:nth-child(2) {
+  background-color: #FFF;
+}
+nav > ul > li:nth-child(3) {
+  background-color: #c94035;
+}
+nav > ul > li > a {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+}
+nav li > ul {
+  width: 100%;
+  list-style: none;
+  display: none;
+}
+nav li:hover > ul {
+  background-color: #ffb48e;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+nav li > ul > li > a {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+}
+
+/* main */
+
+main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero video {
+  z-index: -1;
+  position: relative;
+}
+
+.intro {
+  padding: 7px;
+}
+.intro img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+/* こだわり */
+
+.kdwr {
+  padding: 7px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 7px;
+}
+.kdwr-card {
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  padding: 14px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+@media (min-width: 600px) {
+  .kdwr {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .kdwr-card {
+    width: calc(50% - 7px);
+  }
+}
+.kdwr-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* footer */
+
+footer {
+  margin-top: 120px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 100px 14px;
+}
+#access img {
+  max-width: 300px;
+}
